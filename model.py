@@ -56,9 +56,11 @@ def init_model(model,device):
   model = model.to(device)
   model = init_weights(model)
   return model
+
+
 class ColorizationModel(nn.Module):
   def __init__(self,net_G= None,lr_G=2e-4,lr_D=2e-4,
-               beta1=0.5,beta2=0.999,lambda_L1=100.):
+               beta1=0.9,beta2=0.999,lambda_L1=100.):
     super().__init__()
     self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     self.lambda_L1 = lambda_L1
