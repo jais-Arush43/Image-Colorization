@@ -2,7 +2,7 @@ from tqdm.notebook import tqdm
 from dataloader import *
 from utils import *
 def train_model(model, train_set, epochs, display_every=200):
-    data = next(iter(val_set)) 
+    
     for e in range(epochs):
         loss_meter_dict = create_loss_meters() 
         i = 0                                
