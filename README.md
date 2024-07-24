@@ -24,7 +24,7 @@ Pix2pix proposes a general solution using:
 ## Loss Functions
 - Adversarial Loss: Encourages realistic-looking colorizations.
 
-  ![GAN Loss](images/GAN_loss.jpeg)
+  ![GAN Loss](images/GAN_loss.jpg)
 - L1 Loss: Reduces conservative colorizations (e.g., gray or brown) by penalizing the mean absolute error between predicted and actual colors.
 
   ![L1 Loss](images/l1_loss.jpg)
