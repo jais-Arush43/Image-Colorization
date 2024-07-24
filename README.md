@@ -34,7 +34,7 @@ The U-Net architecture consists of:
 - Down-sampling: Reduces the input image size step-by-step to extract features.
 - Up-sampling: Expands the reduced image back to the original size, producing the color channels.
 
-  ![U-net Architecture](images/unet.jpg)
+  ![U-net Architecture](images/unet.png)
 ### Discriminator
 The discriminator is a "Patch" discriminator, which:
 
