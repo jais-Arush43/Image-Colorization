@@ -23,7 +23,11 @@ Pix2pix proposes a general solution using:
 - Discriminator: Takes the generated *a and *b channels, concatenates them with the grayscale image, and decides if the image is real or fake.
 ## Loss Functions
 - Adversarial Loss: Encourages realistic-looking colorizations.
+
+  ![GAN Loss](images/GAN_loss.jpeg)
 - L1 Loss: Reduces conservative colorizations (e.g., gray or brown) by penalizing the mean absolute error between predicted and actual colors.
+
+  ![L1 Loss](images/l1_loss.jpg)
 - Combined Loss: Balances the contributions of both losses using a coefficient λ.
 
   ![Loss Function](images/loss.jpg)
