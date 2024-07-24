@@ -7,8 +7,11 @@ The task of colorizing black and white images has long been a challenging endeav
 ## Background
 ### Color Spaces
 - RGB Color Space: Images are represented as a rank-3 array (height, width, color) with three numbers for each pixel, indicating the intensity of Red, Green, and Blue channels.
+  
   ![RGB Image Space](images/rgb.jpg)
 - Lab Color Space: Comprises three channels - L (Lightness), a (green-red), and b (yellow-blue). The L channel appears as a grayscale image, which is why it is commonly used in colorization tasks. By using Lab, we can give the L channel to the model (grayscale image) and predict the *a and *b channels to reconstruct the colorful image.
+
+  ![Lab Image Space](images/lab.jpg)
 ## Why Lab Over RGB ?
 - Prediction Simplicity: Predicting two channels (*a and *b) is simpler than predicting three (RGB).
 - Combination Reduction: With 256 choices per channel, RGB has 256³ combinations (over 16 million) while Lab has 256² (about 65000).
@@ -22,12 +25,16 @@ Pix2pix proposes a general solution using:
 - Adversarial Loss: Encourages realistic-looking colorizations.
 - L1 Loss: Reduces conservative colorizations (e.g., gray or brown) by penalizing the mean absolute error between predicted and actual colors.
 - Combined Loss: Balances the contributions of both losses using a coefficient λ.
+
+  ![Loss Function](images/loss.jpg)
 ## Model Architecture
 ### Generator (U-Net)
 The U-Net architecture consists of:
 
 - Down-sampling: Reduces the input image size step-by-step to extract features.
 - Up-sampling: Expands the reduced image back to the original size, producing the color channels.
+
+  ![U-net Architecture](images/unet.jpg)
 ### Discriminator
 The discriminator is a "Patch" discriminator, which:
 
