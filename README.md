@@ -7,7 +7,7 @@ The task of colorizing black and white images has long been a challenging endeav
 ## Background
 ### Color Spaces
 - RGB Color Space: Images are represented as a rank-3 array (height, width, color) with three numbers for each pixel, indicating the intensity of Red, Green, and Blue channels.
-  ![RGB Image Space](Image-Colorization/Image/rgb.jpg)
+  ![RGB Image Space](images/rgb.jpg)
 - Lab Color Space: Comprises three channels - L (Lightness), a (green-red), and b (yellow-blue). The L channel appears as a grayscale image, which is why it is commonly used in colorization tasks. By using Lab, we can give the L channel to the model (grayscale image) and predict the *a and *b channels to reconstruct the colorful image.
 ## Why Lab Over RGB ?
 - Prediction Simplicity: Predicting two channels (*a and *b) is simpler than predicting three (RGB).
