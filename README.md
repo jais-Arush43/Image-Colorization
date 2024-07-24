@@ -1,5 +1,5 @@
 
-# Image-Colorization
+# ChromaGen
 ## Introduction
 The task of colorizing black and white images has long been a challenging endeavor, traditionally requiring substantial human effort and hardcoding. With recent advancements in artificial intelligence and deep learning, this process can now be automated end-to-end.
 
