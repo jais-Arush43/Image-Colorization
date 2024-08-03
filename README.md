@@ -54,8 +54,8 @@ The discriminator is a "Patch" discriminator, which:
 - Combine adversarial loss and L1 loss for supervision.
 ### New Strategy - Final Model
 #### Pretraining:
-- Stage 1: Use a pretrained ResNet18 as the backbone of the U-Net.
-- Stage 2: Train the U-Net with L1 loss on the colorization task.
+- Stage 1: Use a pretrained ResNet18 as the backbone of the Generator.
+- Stage 2: Train the Generator with L1 loss on the colorization task.
 #### Final Training: 
 - Combine adversarial loss with L1 loss as before.
 ## Conclusion
